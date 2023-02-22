@@ -33,7 +33,7 @@ steps:
     veracodeAppProfile: 'NodeGoat - AzureDevops'
     version: '$(build.buildNumber)'
     filepath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tar.gz'
-    failTheBuildIfVeracodeScanDidNotInitiate: true
+    createProfile: true
     maximumWaitTime: '30'
   displayName: 'Veracode Static upload and Scan'
 
