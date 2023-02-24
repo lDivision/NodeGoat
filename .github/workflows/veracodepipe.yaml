@@ -1,6 +1,6 @@
 name: security-action
 on:
-  push:
+  pull_request:
     branches:    
       - '**'        
       - '!master'   
