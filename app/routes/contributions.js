@@ -4,6 +4,7 @@ const {
 } = require("../../config/config");
 
 /* The ContributionsHandler must be constructed with a connected db */
+// novo teste
 function ContributionsHandler(db) {
     "use strict";
 
