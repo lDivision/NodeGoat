@@ -4,6 +4,7 @@ const {
 } = require("../../config/config");
 
 /* The ContributionsHandler must be constructed with a connected db */
+// novo teste
 function ContributionsHandler(db) {
     "use strict";
 
@@ -55,6 +56,7 @@ function ContributionsHandler(db) {
             });
         }
         // Prevent more than 30% contributions
+        //teste
         if (preTax + afterTax + roth > 30) {
             return res.render("contributions", {
                 updateError: "Contribution percentages cannot exceed 30 %",
