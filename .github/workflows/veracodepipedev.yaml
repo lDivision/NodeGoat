@@ -2,7 +2,7 @@ name: security-action
 on:
   push:
     branches:         
-      - 'master'
+      - 'dev'
 jobs:   
   Veracode-Software-Composition-Analisys:
     runs-on: ubuntu-latest
