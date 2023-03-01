@@ -33,6 +33,7 @@ steps:
     veracodeAppProfile: 'NodeGoat - Project'
     version: '$(build.buildNumber)'
     filepath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tar.gz'
+    area: 'TREINAMENTO'
     createProfile: true
   displayName: 'Veracode Static upload and Scan'
 
