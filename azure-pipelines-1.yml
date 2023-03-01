@@ -30,7 +30,7 @@ steps:
     ConnectionDetailsSelection: 'Credentials'
     apiId: '$(apiid)'
     apiKey: '$(apikey)'
-    veracodeAppProfile: 'NodeGoat - AzureDevops'
+    veracodeAppProfile: 'NodeGoat - Project'
     version: '$(build.buildNumber)'
     filepath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tar.gz'
     createProfile: true
