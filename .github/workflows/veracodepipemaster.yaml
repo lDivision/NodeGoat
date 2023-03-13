@@ -1,4 +1,4 @@
-name: Veracode Scan - Master
+name: Veracode_Scan_Master
 on:
   push:
     branches:    
