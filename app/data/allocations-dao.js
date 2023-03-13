@@ -25,7 +25,7 @@ const AllocationsDAO = function(db){
             funds: funds,
             bonds: bonds
         };
-        // TESTE
+        // TESTE 13.03.23
 
         allocationsCol.update({
             userId: parsedUserId
