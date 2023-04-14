@@ -57,7 +57,7 @@ steps:
     ConnectionDetailsSelection: 'Credentials'
     apiId: '$(apiid)'
     apiKey: '$(apikey)'
-    veracodeAppProfile: 'NodeGoat - AzureDevops'
+    veracodeAppProfile: 'NodeGoat - Project'
     sandboxName: 
     importType: 'All Flaws'
     workItemType: 'Task'
