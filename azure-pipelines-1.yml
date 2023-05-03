@@ -60,6 +60,6 @@ steps:
     veracodeAppProfile: 'NodeGoat - Project'
     sandboxName: 
     importType: 'All Flaws'
-    workItemType: 'Task'
+    workItemType: 'Issues'
     area: '$(system.teamProject)'
     flawImportLimit: '1000'
