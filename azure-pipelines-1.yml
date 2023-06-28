@@ -5,7 +5,7 @@
 # Import flaws to Azure Boards
 
 trigger:
-- $(Build.SourceBranchName)
+- main
 
 pool:
   vmImage: ubuntu-latest
