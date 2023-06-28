@@ -30,7 +30,7 @@ steps:
     ConnectionDetailsSelection: 'Credentials'
     apiId: '$(apiid)'
     apiKey: '$(apikey)'
-    veracodeAppProfile: 'NodeGoat - Project'
+    veracodeAppProfile: 'NodeGoat - Serviço'
     version: '$(build.buildNumber)'
     filepath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tar.gz'
     createProfile: true
@@ -52,14 +52,14 @@ steps:
   displayName: 'Veracode Static Analysis PipelineScan'
   continueOnError: true
 
-- task: Veracode Flaw Importer@3
-  inputs:
-    ConnectionDetailsSelection: 'Credentials'
-    apiId: '$(apiid)'
-    apiKey: '$(apikey)'
-    veracodeAppProfile: 'NodeGoat - Project'
-    sandboxName: 
-    importType: 'All Flaws'
-    workItemType: 'Issue'
-    area: '$(system.teamProject)'
-    flawImportLimit: '1000'
+# - task: Veracode Flaw Importer@3
+#   inputs:
+#     ConnectionDetailsSelection: 'Credentials'
+#     apiId: '$(apiid)'
+#     apiKey: '$(apikey)'
+#     veracodeAppProfile: 'NodeGoat - Project'
+#     sandboxName: 
+#     importType: 'All Flaws'
+#     workItemType: 'Issue'
+#     area: '$(system.teamProject)'
+#     flawImportLimit: '1000'
