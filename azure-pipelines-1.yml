@@ -5,7 +5,7 @@
 # Import flaws to Azure Boards
 
 trigger:
-- main
+- master
 
 pool:
   vmImage: ubuntu-latest
@@ -30,7 +30,7 @@ steps:
     ConnectionDetailsSelection: 'Credentials'
     apiId: '$(apiid)'
     apiKey: '$(apikey)'
-    veracodeAppProfile: 'NodeGoat - Serviço'
+    veracodeAppProfile: 'NodeGoat - ServiçoV2'
     version: '$(build.buildNumber)'
     filepath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tar.gz'
     createProfile: true
