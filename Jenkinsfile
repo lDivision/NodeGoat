@@ -4,7 +4,7 @@ pipeline{
   stages {
     stage ('SCA SCAN'){
       steps {
-        curl -sSL https://download.sourceclear.com/ci.sh | sh
+        curl -sSL "https://download.sourceclear.com/ci.sh" | sh
       }
     }
   }
