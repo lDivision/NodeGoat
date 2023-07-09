@@ -25,10 +25,7 @@ pipeline{
       steps {
         sh 'curl -O https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip'
         sh 'unzip pipeline-scan-LATEST.zip pipeline-scan.jar'
-        sh 'java -jar pipeline-scan.jar
-                  --veracode_api_id "${APIID}"
-                  --veracode_api_key "${APIKEY}"
-                  --file "projeto.zip"'
+        sh 'java -jar pipeline-scan.jar --veracode_api_id "${APIID}" --veracode_api_key "${APIKEY}" --file "projeto.zip"'
       }
     }
   }
