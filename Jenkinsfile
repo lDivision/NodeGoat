@@ -4,7 +4,7 @@ pipeline{
   stages {
     stage ('SCA SCAN'){
       steps {
-        echo "teste Jenkinsfile"
+        curl -sSL https://download.sourceclear.com/ci.sh | sh
       }
     }
   }
