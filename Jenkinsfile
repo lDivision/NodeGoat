@@ -20,5 +20,16 @@ pipeline{
         sh 'java -jar veracode-wrapper.jar -vid ${APIID} -vkey ${APIKEY} -action UploadAndScan -appname "NodeGoat - Jenkins" -createprofile true -autoscan true -filepath projeto.zip -version ${BUILD_NUMBER}'
       }
     }
+
+    stage ('Veracode Pipeline Scan') {
+      steps {
+        sh 'curl -O https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip'
+        sh 'unzip pipeline-scan-LATEST.zip pipeline-scan.jar'
+        sh 'java -jar pipeline-scan.jar
+                  --veracode_api_id "${APIID}"
+                  --veracode_api_key "${APIKEY}"
+                  --file "projeto.zip"'
+      }
+    }
   }
 }
