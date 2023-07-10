@@ -4,7 +4,7 @@ pipeline{
   stages {
     stage ('SCA SCAN'){
       steps {
-        sh 'export export SRCCLR_SCM_URI=${JOB_URL}'
+        sh 'export SRCCLR_SCM_NAME=JENKINS-TESTELAB'
         sh 'curl -sSL https://download.sourceclear.com/ci.sh | bash -s scan . '
       }
     }
