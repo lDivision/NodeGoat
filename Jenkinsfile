@@ -4,7 +4,8 @@ pipeline{
   stages {
     stage ('SCA SCAN'){
       steps {
-        sh 'curl -sSL https://download.sourceclear.com/ci.sh | bash -s scan . --uri-as-name'
+        sh 'export export SRCCLR_SCM_URI=${JOB_URL}'
+        sh 'curl -sSL https://download.sourceclear.com/ci.sh | bash -s scan . '
       }
     }
 
