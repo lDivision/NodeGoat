@@ -4,7 +4,7 @@ name: Checkmarx Scan
 on:
   push:
     branches:
-      - main
+      - master
       - develop
 
 jobs:
