@@ -1,1 +1,33 @@
 
+name: Checkmarx Scan
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  checkmarx-sca:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v2
+
+    - name: Baixar Checkmarx CLI
+      run: |
+        wget https://download.checkmarx.com/sca/cli/latest/checkmarx_sca_cli.zip
+        unzip checkmarx_sca_cli.zip -d checkmarx_sca_cli
+        chmod +x checkmarx_sca_cli/cxsca
+
+    
+    - name: Chave API Check
+      run: |
+        ./checkmarx_sca_cli/cxsca auth --api-key ${{ secrets.CHECKMARX_API_KEY }}
+
+    - name: Run asynchronous SCA scan
+      run: |
+        ./checkmarx_sca_cli/cxsca scan --project-name "NodeGoat-Test" --source-location . --branch ${{ github.ref_name }} --async
+
+    
