@@ -1,10 +1,9 @@
-
-name: Checkmarx Scan
+name: Checkmarx 
 
 on:
   push:
     branches:
-      - master
+      - main
       - develop
 
 jobs:
@@ -15,19 +14,17 @@ jobs:
     - name: Checkout source code
       uses: actions/checkout@v2
 
-    - name: Baixar Checkmarx CLI
+    - name: Checkmarx CLI
       run: |
         curl -L -o ast-cli.tar.gz https://github.com/Checkmarx/ast-cli/releases/download/2.2.5/ast-cli_linux_x64.tar.gz
         tar -xzf ast-cli.tar.gz
         chmod +x cx
 
-    
-    - name: Chave API Check
+    - name: Chave de API
       run: |
-        ./checkmarx_sca_cli/cxsca auth --api-key ${{ secrets.CHECKMARX_API_KEY }}
+        ./cx auth --key ${{ secrets.CHECKMARX_API_KEY }}
 
-    - name: Run asynchronous SCA scan
+    - name: SCA scan
       run: |
-        ./checkmarx_sca_cli/cxsca scan --project-name "NodeGoat-Test" --source-location . --branch ${{ github.ref_name }} --async
+        ./cx sca scan --project-name "MyProject-SCA" --source-location . --branch ${{ github.ref_name }} --async
 
-    
