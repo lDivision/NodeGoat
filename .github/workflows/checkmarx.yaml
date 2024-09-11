@@ -22,7 +22,8 @@ jobs:
 
     - name: Chave de API
       run: |
-        ./cx auth --key ${{ secrets.CHECKMARX_API_KEY }}
+        ./cx auth --client-id ${{ secrets.CHECKMARX_CLIENT_ID }} --client-secret ${{ secrets.CHECKMARX_API_KEY }}
+    
 
     - name: SCA scan
       run: |
