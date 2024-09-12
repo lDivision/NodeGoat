@@ -20,8 +20,8 @@ jobs:
         project_name: ${{ github.repository }}
         cx_tenant: ${{ vars.TENANT }}
         base_uri: ${{ vars.BASE_URI }} 
-        cx_client_id: ${{ secrets.CHECKMARX_CLIENT_ID }}
-        cx_client_secret: ${{ secrets.CHECKMARX_API_KEY }}
+        cx_client_id: ${{ secrets.CX_CLIENT_ID }}
+        cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
 
     #- name: Checkmarx CLI
      # run: |
