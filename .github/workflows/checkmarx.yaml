@@ -19,9 +19,10 @@ jobs:
       with:
         project_name: ${{ github.repository }}
         cx_tenant: ${{ vars.TENANT }}
-        base_uri: ${{ vars.BASE_URI }} 
+        base_uri: https://ast.checkmarx.net
         cx_client_id: ${{ secrets.CX_CLIENT_ID }}
         cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+        
 
     #- name: Checkmarx CLI
      # run: |
